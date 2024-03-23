@@ -1,6 +1,9 @@
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", onClick);
 }
+for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
+  document.querySelectorAll("button")[i].addEventListener("touchstart", onClick);
+}
 function onClick() {
   var buttonInnerHtml = this.innerHTML;
   makeSound(buttonInnerHtml);
@@ -13,14 +16,7 @@ function Onkey(){
   animation(event.key);
 }
 
-for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
-  document.querySelectorAll("button")[i].addEventListener("touchstart", onClick);
-}
-function onClick() {
-  var buttonInnerHtml = this.innerHTML;
-  makeSound(buttonInnerHtml);
-  animation(buttonInnerHtml);
-}
+
 
 
 function makeSound(key){
